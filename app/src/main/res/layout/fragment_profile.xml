@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="8dp"
+    tools:context=".ui.notifications.viewpage.ProfileFragment">
+
+
+    <ImageView
+        android:id="@+id/profile_photo"
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:src="@drawable/profile_photo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/postInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/profile_photo"
+        app:layout_constraintEnd_toStartOf="@id/follInfo"
+        app:layout_constraintStart_toEndOf="@id/profile_photo"
+        app:layout_constraintTop_toTopOf="@id/profile_photo">
+
+        <TextView
+            android:id="@+id/postCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="54"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Posts"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/postCount"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/follInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/profile_photo"
+        app:layout_constraintEnd_toStartOf="@id/followingInfo"
+        app:layout_constraintStart_toEndOf="@id/postInfo"
+        app:layout_constraintTop_toTopOf="@id/profile_photo">
+
+        <TextView
+            android:id="@+id/followersCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="834"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/followers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Followers"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/postCount"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/followingInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/profile_photo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/follInfo"
+        app:layout_constraintTop_toTopOf="@id/profile_photo">
+
+        <TextView
+            android:id="@+id/followsCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="162"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/follows"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Following"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/postCount"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Jacob West"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_photo" />
+
+    <TextView
+        android:id="@+id/user_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Digital goodies designer @pixsellz \nEverything is designed."
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/username" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/et_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/white"
+        android:text="Edit profile"
+        android:textAllCaps="false"
+        android:textColorHint="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintTop_toBottomOf="@id/user_description" />
+
+    <LinearLayout
+        android:id="@+id/middle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/middle">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            />
+
+
+    </androidx.viewpager.widget.ViewPager>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
